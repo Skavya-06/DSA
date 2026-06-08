@@ -22,6 +22,7 @@ int main(){
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
+    
     // Treverse
     Node* temp=head;
     while(temp != NULL){
