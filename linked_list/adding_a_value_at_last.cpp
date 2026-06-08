@@ -22,8 +22,21 @@ int main(){
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
-    // Treverse
+    int value;
+    cout<<"Enter a value";
+    cin>>value;
+    Node* add=      new Node(value);
+
+    // addition
     Node* temp=head;
+    while(temp->next != NULL){
+        temp=temp-> next;
+    }
+    temp->next = add;
+
+
+    // Treverse
+    temp=head;
     while(temp != NULL){
         cout<< temp -> data <<" ";
         temp=temp-> next;
