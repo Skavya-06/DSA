@@ -22,9 +22,29 @@ int main(){
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
+    
+    int value;
+    cout<<"Enter a value";
+    cin>>value;
+    int place;
+    cout<<"Where to enter";
+    cin>>place;
+    int count=1;
 
+    Node* add=      new Node(value);
+
+   Node* temp=head;
+    while(temp->next != NULL){
+        count=count+1;
+        if(count==(place)){
+            add->next=temp->next;
+            temp->next=add;
+            break;
+        }
+        temp=temp-> next;
+    }    
     // Treverse
-    Node* temp=head;
+    temp=head;
     while(temp != NULL){
         cout<< temp -> data <<" ";
         temp=temp-> next;

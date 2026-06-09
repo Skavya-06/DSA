@@ -23,10 +23,23 @@ int main(){
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
 
-    // Treverse
+
     Node* temp=head;
+    while(temp->next->next != NULL){
+        temp=temp-> next;
+    }
+    temp->next=NULL;
+
+
+
+    // Treverse
+    temp=head;
     while(temp != NULL){
         cout<< temp -> data <<" ";
         temp=temp-> next;
     }
+
+
+
+
 }

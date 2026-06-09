@@ -22,11 +22,26 @@ int main(){
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
+    
+    int value;
+    cout<<"Enter a value";
+    cin>>value;
+    string flag= "false";
+    int count=1;
 
-    // Treverse
-    Node* temp=head;
-    while(temp != NULL){
-        cout<< temp -> data <<" ";
+
+   Node* temp=head;
+    while(temp!= NULL){
+        if(temp->data==(value)){
+            flag="true";
+            cout<<flag<<" at position "<<count;
+            break;
+        }
         temp=temp-> next;
+        count=count+1;
+    }    
+    if(flag=="false"){
+        cout<<"Not found";
     }
+
 }

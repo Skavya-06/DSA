@@ -22,11 +22,20 @@ int main(){
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
+    
+    
+    head=head->next;
+    delete first;
 
+    
     // Treverse
     Node* temp=head;
     while(temp != NULL){
         cout<< temp -> data <<" ";
         temp=temp-> next;
     }
+
+
+
+
 }
