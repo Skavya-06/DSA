@@ -1,4 +1,4 @@
-// // INPUT= [ 1 3 2 5 3 4]
+// // INPUT= [ 1 3 2 1 3 4]
 
 
 // #include <iostream>
