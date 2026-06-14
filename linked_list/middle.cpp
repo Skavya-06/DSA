@@ -10,27 +10,40 @@ class Node{
     }
 };
 int main(){
-    // creating a node manually
-    Node* head;
+Node* head;
     Node* first=    new Node(10);
     Node* second=   new Node(20);
     Node* third=    new Node(30);
     Node* fourth=   new Node(40);
     Node* fifth=    new Node(50);
-
-
-    // creating a linked list manually
-
     head=first;
     head -> next= second;
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
 
-    // Treverse
     Node* temp=head;
-    while(temp != NULL){
-        cout<< temp -> data <<" ";
-        temp=temp->next;
+    int count=0;
+    while(temp!= NULL){
+        count=count+1;
+        temp=temp-> next;
     }
+    int middle=(count/2);
+    if(count%2==0){
+        cout<<"No middle";
+    }
+    else{
+        temp=head;
+        count=0;
+        while(temp!= NULL){
+            count=count+1;
+        if(count==middle){
+            cout<<temp->next->data;
+            break;
+        }
+        temp=temp-> next;
+    }
+    }
+
+
 }

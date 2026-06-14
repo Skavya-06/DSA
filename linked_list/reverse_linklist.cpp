@@ -9,28 +9,40 @@ class Node{
         next=NULL;
     }
 };
+Node* reverse(Node* head){
+    Node* prev = NULL;
+    Node* curr = head;
+    while(curr)
+    {
+    Node* nextNode = curr->next;
+    curr->next = prev;
+    prev = curr;
+    curr = nextNode;
+    }
+    return prev;
+}
+
 int main(){
-    // creating a node manually
-    Node* head;
+Node* head;
     Node* first=    new Node(10);
     Node* second=   new Node(20);
     Node* third=    new Node(30);
     Node* fourth=   new Node(40);
     Node* fifth=    new Node(50);
-
-
-    // creating a linked list manually
-
     head=first;
     head -> next= second;
     head -> next ->next =third;
     head -> next ->next -> next =fourth;
     head -> next ->next -> next-> next=fifth;
 
+    head=reverse(head);
+
+
     // Treverse
     Node* temp=head;
     while(temp != NULL){
         cout<< temp -> data <<" ";
-        temp=temp->next;
+        temp=temp-> next;
     }
+
 }
