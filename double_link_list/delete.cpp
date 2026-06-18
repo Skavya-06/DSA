@@ -40,7 +40,7 @@ int main() {
 
     while (temp != NULL) {
         count++;
-        if (count == x-1) {
+        if (count == x) {
             if (temp->next != NULL) {
                 if (temp->next->next != NULL) {
                     temp->next->next->prev = temp;
